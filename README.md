@@ -1,8 +1,8 @@
-# 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
+## 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
 
 > 此系列重点在于如何构建一个 React 全家桶环境，完成一个 `todoList` 的小 demo，可以当做一个 React 的入门练习，往后会讲到 Redux、React Redux、React Router 的使用和配置，以及 webpack 的一些优化的方法和技巧。
 > 
-> 文末tip：--save 与 --save-dev 区别
+> 文末tip：[--save 与 --save-dev 区别](#tip1---save-与---save-dev-区别)
 
 
 ### 目标
@@ -12,7 +12,7 @@
 ![QQ20181030-225428@2x](https://github.com/zwkkkk1/react-cli/blob/master/doc/assets/image/chapter-1/QQ20181030-225428%402x.png)
 
 
-可能这个看着很简单，不过当时我在自己配置的时候也是废了一些功夫，如果觉得简单可以跳过这一节(文末总结处有此节代码)
+可能这个看着很简单，不过当时我在自己配置的时候也是废了一些功夫，如果觉得简单可以跳过这一节(文末(总结)[#总结]处有此节代码)
 
 ### 步骤
 
