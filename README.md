@@ -1,4 +1,4 @@
-## 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
+### 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
 
 > 此系列重点在于如何构建一个 React 全家桶环境，完成一个 `todoList` 的小 demo，可以当做一个 React 的入门练习，往后会讲到 Redux、React Redux、React Router 的使用和配置，以及 webpack 的一些优化的方法和技巧。
 > 
