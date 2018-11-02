@@ -33,12 +33,12 @@ npm init
 
 #### 2.修改文件目录
 
-在 `react-cli` 文件夹下，新建一个 `src` 文件夹，`src` 文件夹里建一个 `index.js`
+在 `react-cli` 文件夹下，新建一个 `src` 文件夹，`src` 文件夹里建一个 `app.js`
 
 ```
     .
     +-- src     程序目录
-    |  +-- index.js   入口文件
+    |  +-- app.js   入口文件
 ```
 
 #### 3. 安装 webpack
@@ -59,8 +59,8 @@ npm install webpack -D
 var path = require('path')
 
 module.exports = {
-  // 入口 入口文件是 ./src/index.js
-  entry: path.join(__dirname, './src/index.js'),
+  // 入口 入口文件是 ./src/app.js
+  entry: path.join(__dirname, './src/app.js'),
   // 出口 文件会输出到 dist 文件夹，输出的文件名叫 bundle.js
   output: {
     path: path.join(__dirname, './dist'),
@@ -102,7 +102,7 @@ webpack --config webpack.config.js
 </html>
 ```
 
-并且在 `src/index.js` 中填写：
+并且在 `src/app.js` 中填写：
 
 ```js
 document.getElementById('root').innerHTML = 'hello world'
@@ -122,7 +122,7 @@ document.getElementById('root').innerHTML = 'hello world'
 npm install react react-dom --save
 ```
 
-再在 `src/index.js` 加入 react 代码
+再在 `src/app.js` 加入 react 代码
 
 ```js
 import React from 'react'

@@ -1,8 +1,8 @@
 var path = require('path')
 
 module.exports = {
-  // 入口 入口文件是 ./src/index.js
-  entry: path.join(__dirname, './src/index.js'),
+  // 入口 入口文件是 ./src/app.js
+  entry: path.join(__dirname, './src/app.js'),
   // 出口 文件会输出到 dist 文件夹，输出的文件名叫 bundle.js
   output: {
     path: path.join(__dirname, './dist'),
