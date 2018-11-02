@@ -1,8 +1,8 @@
-# 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
+### 从零构建 React 开发环境(一) —— hello world，麻雀虽小五脏俱全~
 
 > 此系列重点在于如何构建一个 React 全家桶环境，完成一个 `todoList` 的小 demo，可以当做一个 React 的入门练习，往后会讲到 Redux、React Redux、React Router 的使用和配置，以及 webpack 的一些优化的方法和技巧。
 > 
-> 文末tip：--save 与 --save-dev 区别
+> 文末tip：[--save 与 --save-dev 区别](#tip1---save-与---save-dev-区别)
 
 
 ### 目标
@@ -12,7 +12,7 @@
 ![QQ20181030-225428@2x](https://github.com/zwkkkk1/react-cli/blob/master/doc/assets/image/chapter-1/QQ20181030-225428%402x.png)
 
 
-可能这个看着很简单，不过当时我在自己配置的时候也是废了一些功夫，如果觉得简单可以跳过这一节(文末总结处有此节代码)
+可能这个看着很简单，不过当时我在自己配置的时候也是废了一些功夫，如果觉得简单可以跳过这一节(文末(总结)[#总结]处有此节代码)
 
 ### 步骤
 
@@ -149,18 +149,29 @@ webpack --config webpack.config.js
 babel 把用最新标准编写的 JavaScript 代码向下编译为可以随处可用的版本
 
 ```
-npm install babel-loader babel-core babel-preset-react -D
+npm install babel-loader@7 babel-core@6 babel-preset-react babel-preset-env babel-preset-stage-0 -D
 ```
 
 > 如果报版本之类的问题，请根据提示下载指定版本的 `babel-core` 或 `babel-loader`
+> `babel-loader@8` 对应的是 `babel-core@7`
+> `babel-loader@7` 对应的是 `babel-core@6` (我使用的是 `babel-loader@7`)
 
+我们先来看看我们下载的一连串 babel 的作用吧
+
+- [babel-core](https://github.com/babel/babel/tree/master/packages/babel-core) Babel 的核心代码
+- [babel-loader](https://github.com/babel/babel-loader) 解析 js 的 loader
+- [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react) 用于解析 jsx 语法
+- [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) 取代之前的 `babel-preset-es2015` `babel-preset-es2016` 等包，解析 ES6 等语法
+- [babel-preset-stage-0](https://github.com/babel/babel/tree/master/packages/babel-preset-stage-0) 用于解析 ES7 提案
 
 项目目录下新建 `.babelrc` 文件输入：
 
 ```json
 {
   "presets": [
-    "react"
+    "env",
+    "react",
+    "stage-0"
   ]
 }
 ```
@@ -172,8 +183,8 @@ npm install babel-loader babel-core babel-preset-react -D
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: ['babel-loader?cacheDirectory=true'],
-        include: path.join(__dirname, 'src')
       }
     ]
 ```
@@ -188,9 +199,9 @@ npm install babel-loader babel-core babel-preset-react -D
 
 像我们上面设置的 `babel-loader?cacheDirectory=true` 或是设置为空值 `babel-loader?cacheDirectory`，默认缓存目录在 `node_modules/.cache/babel-loader`
 
-##### 2.include
+##### 2.exclude
 
-我们设置的 `include: path.join(__dirname, 'src')`，表示 `babel-loader` 只会检查 `src` 文件夹下的内容，会忽略如 `node_module` 的文件夹。
+我们设置的 `exclude: /node_modules/`，表示 `babel-loader` 不会检查 `node_module` 文件夹。
 
 因为 `node_module` 下的第三方库都是提前编译打包好的，我们需要避免重复去编译它们。
 

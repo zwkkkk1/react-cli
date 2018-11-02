@@ -13,8 +13,8 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: ['babel-loader?cacheDirectory=true'],
-        include: path.join(__dirname, 'src')
       }
     ]
   },
