@@ -1,7 +1,11 @@
 {
   "presets": [
+<<<<<<< HEAD
     "env",
     "react",
     "stage-0"
+=======
+    "react"
+>>>>>>> 6b2ef0b8d36c36496b7dce105fc69fc2951c8725
   ]
 }
