@@ -1,17 +1,7 @@
 {
   "presets": [
-<<<<<<< HEAD
-<<<<<<< HEAD
     "env",
     "react",
-    "stage-0"
-=======
-    "react"
->>>>>>> 6b2ef0b8d36c36496b7dce105fc69fc2951c8725
-=======
-    "env",
-    "react",
-    "stage-0"
->>>>>>> 31fb9bf0399c304b941cd0c31264dd2ff75a0f8e
-  ]
+    "stage-0",
+  ],
 }

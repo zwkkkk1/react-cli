@@ -9,7 +9,7 @@
 
 命令行键入 `npm start`，访问 `localhost:8080` 可以访问到一个 `hello world` 的页面。
 
-![QQ20181030-225428@2x](media/15409095017678/QQ20181030-225428@2x.png)
+![QQ20181030-225428@2x](https://github.com/zwkkkk1/react-cli/blob/chapter-1/doc/assets/image/chapter-1/QQ20181030-225428%402x.png)
 
 
 可能这个看着很简单，不过当时我在自己配置的时候也是废了一些功夫，如果觉得简单可以跳过这一节(文末总结处有此节代码)
@@ -110,7 +110,7 @@ document.getElementById('root').innerHTML = 'hello world'
 
 然后访问 index.html 可以看到 hello world
 
-![QQ20181031-155238](media/15409095017678/QQ20181031-155238.png)
+![QQ20181031-155238](https://github.com/zwkkkk1/react-cli/blob/chapter-1/doc/assets/image/chapter-1/QQ20181031-155238.png)
 
 请注意 URL，我们并不是用 `localhost:8080` 访问的页面，而且还没有使用 React
 
@@ -140,7 +140,7 @@ webpack --config webpack.config.js
 
 这里会报错：
 
-![QQ20181031-160843](media/15409095017678/QQ20181031-160843.png)
+![QQ20181031-160843](https://github.com/zwkkkk1/react-cli/blob/chapter-1/doc/assets/image/chapter-1/QQ20181031-160843.png)
 
 因为 `<div>hello world</div>` 的 jsx 语法，我们的浏览器可不认识这个，我们需要引入 babel 去编译我们的 React 代码
 
