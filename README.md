@@ -73,6 +73,8 @@ module.exports = {
 
 `entry`、`output` 及之后会提到的概念这里不涉及讲解，自行去 [webpack 官方手册](https://www.webpackjs.com/concepts/)学习。
 
+因为我们在 entry 配置中设了 `./app/index.js`，所以我们先在项目根目录建一个 app 文件夹，再在里面新建一个 `index.js` 文件
+
 在命令行运行：
 ```shell
 webpack --config webpack.config.js
