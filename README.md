@@ -80,9 +80,7 @@ webpack --config webpack.config.js
 
 我们会发现在项目目录下会自动生成 `bundle` 文件夹和 `bundle.js` 文件
 
-> 运行 `webpack` 需全局安装 webpack，如报错运行 `npm install webpack -g`
-
-有时会提醒你需要安装 webpack-cli，按照 webpack 给出的操作步骤一步一步来就可以将 webpack-cli，或者先自行运行 `npm install webpack-cli -D`
+> 运行 `webpack` 需全局安装 webpack，如报错运行 `npm install webpack webpack-cli -g`
 
 此时，在 `client/dist` 文件夹下新建一个 `index.html`
 
