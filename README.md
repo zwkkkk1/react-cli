@@ -231,6 +231,8 @@ npm install babel-loader@7 babel-core@6 babel-preset-react babel-preset-env babe
 
 然后运行 `webpack-dev-server --config webpack.config.js`
 
+有可能会报找不到 webpack-dev-server 命令  `npm install webpack-dev-server -g` 就 ok 了~
+
 这里可能会报错：
 
 ```shell
@@ -247,7 +249,9 @@ Error: Cannot find module 'webpack-cli/bin/config-yargs'
 
 根据提示下载 `webpack-cli`，`npm install webpack-cli -D`
 
-然后访问 `localhost:8080` 就能看到 hello world 了。
+也有可能报 `Error: listen EADDRINUSE 127.0.0.1:8080`，这里在前面 `webpack.config.js` 中将 8080 换成其他端口就好了
+
+然后访问 `localhost:8080`(或其他端口) 就能看到 hello world 了。
 
 大功告成，不过我们的目标中可是要 `npm start`，下一节我们看看怎么设置 `npm start`
 
@@ -265,12 +269,6 @@ Error: Cannot find module 'webpack-cli/bin/config-yargs'
 
 设置好后我们就可以 `npm start` 了~
 
-### 总结
-
-程序虽然很简单，不过对于初学者来说独自来撸还是会碰到问题的，麻雀虽小五脏俱全。
-
-[代码](https://github.com/zwkkkk1/react-cli/tree/chapter-1)
-
 
 ### tip1: --save 与 --save-dev 区别
 
@@ -284,5 +282,9 @@ Error: Cannot find module 'webpack-cli/bin/config-yargs'
  
 另外，如不特别指定即 `npm install`，包信息会默认添加到 `dependencies` 下
 
+### 总结
 
+程序虽然很简单，不过对于初学者来说独自来撸还是会碰到问题的，麻雀虽小五脏俱全。
+
+[代码](https://github.com/zwkkkk1/react-cli/tree/chapter-1)
 
